@@ -1,0 +1,87 @@
+ {
+   "env": {
+     "browser": true,
+     "es2022": true,
+     "node": true,
+     "jest": true
+   },
+  "ignorePatterns": ["node_modules", "dist", "build"],
+  "extends": [
+    "airbnb",
+    "airbnb/hooks",
+    "airbnb-typescript",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:testing-library/react",
+    "prettier"
+  ],
+  "plugins": [
+    "react-refresh",
+    "@typescript-eslint",
+    "testing-library",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+   "parserOptions": {
+     "ecmaFeatures": {
+       "jsx": true
+     },
+     "ecmaVersion": 13,
+     "sourceType": "module",
+     "project": ["./tsconfig.json"]
+   },
+   "overrides": [
+   {
+     "files": ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
+     "extends": ["plugin:testing-library/react"]
+   }
+ ],
+  "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "react-redux/prefer-separate-component-file": 0,
+    "react/no-array-index-key": 0,
+    "no-nested-ternary": 0,
+    "no-shadow": 0,
+    "no-console": "warn",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/state-in-constructor": 0,
+    "jsx-a11y/label-has-associated-control": 0,
+    "react/jsx-props-no-spreading": 0,
+    "import/prefer-default-export": 0,
+    "react/prop-types": 0,
+    "react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }],
+    "indent": [
+      "error", 2, { "SwitchCase": 1 }],
+    "linebreak-style": [0, "unix"],
+    "quotes": [
+      "error", "single"
+    ],
+    "import/no-unresolved": [2, { "caseSensitive": false }],
+    "react-refresh/only-export-components": "warn",
+    "react/react-in-jsx-scope": 0,
+    "prettier/prettier": "error",
+    "import/order": [
+      2,
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index"
+        ],
+        "newlines-between": "always"
+      }
+    ],
+    "testing-library/await-async-query": "error",
+    "testing-library/no-await-sync-query": "error",
+    "testing-library/no-debugging-utils": "warn",
+    "testing-library/no-dom-import": "off"
+  },
+   "settings": {
+     "import/extensions": [
+       ".ts",
+       ".tsx"
+     ]
+   }
+}

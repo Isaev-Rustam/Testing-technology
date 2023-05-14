@@ -1,0 +1,21 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`test <Axios/> > <Axios/> 1`] = `
+[
+  <div
+    data-testid="custom-element"
+  >
+    Leanne Graham
+  </div>,
+  <div
+    data-testid="custom-element"
+  >
+    Ervin Howell
+  </div>,
+  <div
+    data-testid="custom-element"
+  >
+    Clementine Bauch
+  </div>,
+]
+`;
