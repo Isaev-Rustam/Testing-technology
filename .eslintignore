@@ -11,3 +11,5 @@ vite.config.ts
 setup.ts
 coverage
 .husky
+postcss.config.js
+tailwind.config.js

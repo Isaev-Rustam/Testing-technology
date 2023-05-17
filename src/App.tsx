@@ -7,7 +7,7 @@ import ReactTest from './page/react-test';
 import Test from './page/test';
 import WebSocketComponent from './page/web-socket';
 import Yup from './page/yup';
-import TailwindUi from './page/tailwind-ui';
+import TailwindUi from './page/modal';
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
       <Route path="/" element={<Layout />}>
         <Route path="/" element={<Home />} />
         <Route path="query" element={<Query />} />
-        <Route path="tailwind-ui" element={<TailwindUi />} />
+        <Route path="modal" element={<TailwindUi />} />
         <Route path="yup" element={<Yup />} />
         <Route path="test" element={<Test />} />
         <Route path="react-test" element={<ReactTest />} />

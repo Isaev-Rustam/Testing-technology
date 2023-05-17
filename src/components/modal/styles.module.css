@@ -1,0 +1,15 @@
+.button {
+  width: 103px;
+  font-size: 18px;
+  background: #646cff;
+  border-radius: 5px ;
+  margin-left: 10px;
+}
+
+.modalContent {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
