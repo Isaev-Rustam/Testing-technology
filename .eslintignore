@@ -3,6 +3,7 @@ build
 dist
 /.vscode
 /.git
+templates
 .prettierrc
 .eslintrc.json
 vite-env.d.ts
