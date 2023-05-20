@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export function Events() {
+export var Events = () => {
   const [state, setState] = useState<number>(0);
   const [disable, setDisable] = useState<boolean>(true);
 
@@ -27,4 +27,4 @@ export function Events() {
       </button>
     </div>
   );
-}
+};

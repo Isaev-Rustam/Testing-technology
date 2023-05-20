@@ -19,7 +19,7 @@ const schema = yup
 
 type FormData = yup.InferType<typeof schema>;
 
-function Yup() {
+const Yup = () => {
   const {
     register,
     handleSubmit,
@@ -39,6 +39,6 @@ function Yup() {
       <button type="submit">btn </button>
     </form>
   );
-}
+};
 
 export default Yup;

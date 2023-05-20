@@ -4,7 +4,7 @@ import { ChangeEvent, useState } from 'react';
 import Api from '../../services/api';
 import { Todo } from '../../types/json-server';
 
-function Query() {
+const Query = () => {
   const [inp, setInp] = useState<string>('');
   const queryClient = useQueryClient();
 
@@ -80,6 +80,6 @@ function Query() {
       </ul>
     </div>
   );
-}
+};
 
 export default Query;

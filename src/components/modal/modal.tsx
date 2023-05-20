@@ -42,7 +42,7 @@ const Portal = ({ children }: { children: ReactNode }) => {
   return createPortal(children, container);
 };
 
-export function SimpleAnimatedModal({ opened, onClose, children }: IModal) {
+export var SimpleAnimatedModal = ({ opened, onClose, children }: IModal) => {
   const { mounted } = useMount({ opened });
 
   if (!mounted) {
@@ -56,9 +56,9 @@ export function SimpleAnimatedModal({ opened, onClose, children }: IModal) {
       </Layout>
     </Portal>
   );
-}
+};
 
-function Modal() {
+const Modal = () => {
   const [opened, setOpened] = useState(false);
 
   return (
@@ -75,6 +75,6 @@ function Modal() {
       </SimpleAnimatedModal>
     </>
   );
-}
+};
 
 export default Modal;

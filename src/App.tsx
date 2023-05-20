@@ -8,7 +8,7 @@ import Test from './page/test';
 import WebSocketComponent from './page/web-socket';
 import Yup from './page/yup';
 import TailwindUi from './page/modal';
-import ListContainer from './containers/listContainer/listContainer';
+import ListContainer from './containers/listContainer/list-container';
 
 const App = () => (
   <Routes>

@@ -9,6 +9,6 @@ describe('render  <Query/>', () => {
   });
 
   it('should ', () => {
-    // render(<Query/>)
+    render(<div />);
   });
 });

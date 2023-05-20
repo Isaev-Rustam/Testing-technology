@@ -13,16 +13,14 @@ interface ISearch {
   onChange: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
-export function Search({ value, onChange, children }: ISearch) {
-  return (
-    <div>
-      <label htmlFor="search" style={{ color: 'blue' }}>
-        {children}
-      </label>
-      <input id="search" type="text" value={value} onChange={onChange} />
-    </div>
-  );
-}
+export var Search = ({ value, onChange, children }: ISearch) => (
+  <div>
+    <label htmlFor="search" style={{ color: 'blue' }}>
+      {children}
+    </label>
+    <input id="search" type="text" value={value} onChange={onChange} />
+  </div>
+);
 
 export default function Form() {
   const [search, setSearch] = useState('');
