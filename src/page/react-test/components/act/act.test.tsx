@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from 'vitest';
-import { findByRole, fireEvent, render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import { act } from 'react-dom/test-utils';
 
 import Act from './act';
