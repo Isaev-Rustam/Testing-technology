@@ -1,3 +1,3 @@
 const Test = () => {
-  return test;
+  return <div>tests</div>;
 };
