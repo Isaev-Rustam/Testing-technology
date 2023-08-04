@@ -11,6 +11,7 @@ interface IModal {
 }
 
 const ANIMATION_TIME = 300;
+// eslint-disable-next-line react-refresh/only-export-components
 export const useMount = ({ opened }: { opened: boolean }) => {
   const [mounted, setMounted] = useState(false);
 
@@ -37,12 +38,12 @@ const Portal = ({ children }: { children: ReactNode }) => {
     return () => {
       document.body.removeChild(container);
     };
-  }, []);
+  }, [container]);
 
   return createPortal(children, container);
 };
 
-export var SimpleAnimatedModal = ({ opened, onClose, children }: IModal) => {
+export const SimpleAnimatedModal = ({ opened, onClose, children }: IModal) => {
   const { mounted } = useMount({ opened });
 
   if (!mounted) {

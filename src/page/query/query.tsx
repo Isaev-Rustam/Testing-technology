@@ -2,7 +2,7 @@ import { useMutation, useQuery, useQueryClient } from 'react-query';
 import { ChangeEvent, useState } from 'react';
 
 import Api from '../../services/api';
-import { Todo } from '../../types/json-server';
+import { ITodo } from '../../types/json-server';
 
 const Query = () => {
   const [inp, setInp] = useState<string>('');
@@ -10,11 +10,11 @@ const Query = () => {
 
   const { isLoading, error, data, isSuccess } = useQuery({
     queryKey: ['todo'],
-    queryFn: () => Api.getTodos(),
+    queryFn: () => Api.getTodos<ITodo>(),
   });
 
   const mutationAdd = useMutation({
-    mutationFn: (data: Todo) => Api.createTodo(data),
+    mutationFn: (d: ITodo) => Api.createTodo<ITodo>(d),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['todo'] });
     },
@@ -63,7 +63,7 @@ const Query = () => {
       <ul>
         {isSuccess &&
           Array.isArray(data) &&
-          data.map((i: Todo) => (
+          data.map((i) => (
             <li key={i.id}>
               <button
                 onClick={() => handleDelete(i.id)}

@@ -13,7 +13,7 @@ interface ISearch {
   onChange: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
-export var Search = ({ value, onChange, children }: ISearch) => (
+export const Search = ({ value, onChange, children }: ISearch) => (
   <div>
     <label htmlFor="search" style={{ color: 'blue' }}>
       {children}

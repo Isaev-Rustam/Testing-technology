@@ -7,7 +7,7 @@ import Button from './button';
 describe('<Button />', () => {
   it('it should mount', async () => {
     const fn = vi.fn();
-    render(<Button label="btn" handlerBtn={fn} />);
+    render(<Button handlerBtn={fn}>btn</Button>);
     await userEvent.click(screen.getByRole('button', { name: /btn/i }));
     expect(fn).toBeCalledTimes(1);
   });

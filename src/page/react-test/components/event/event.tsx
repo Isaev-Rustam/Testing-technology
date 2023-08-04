@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export var Events = () => {
+export const Events = () => {
   const [state, setState] = useState<number>(0);
   const [disable, setDisable] = useState<boolean>(true);
 

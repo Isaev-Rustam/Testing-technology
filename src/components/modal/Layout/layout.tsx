@@ -25,7 +25,7 @@ const contentAnimation = {
   exitActive: animationStyles.contentExitActive,
 };
 
-export default function Layout({ onClose, children, opened }: IModal) {
+const Layout = ({ onClose, children, opened }: IModal) => {
   const overlayRef = useRef(null);
   const contentRef = useRef(null);
 
@@ -68,4 +68,5 @@ export default function Layout({ onClose, children, opened }: IModal) {
       </CSSTransition>
     </div>
   );
-}
+};
+export default Layout;

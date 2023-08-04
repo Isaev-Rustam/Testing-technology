@@ -1,17 +1,19 @@
-import { FC, MouseEventHandler } from 'react';
+import { FC, MouseEventHandler, ReactNode } from 'react';
 
 interface Btn {
-  label: string;
-  handlerBtn: MouseEventHandler<HTMLButtonElement>;
+  className?: string;
+  children?: ReactNode;
+  handlerBtn?: MouseEventHandler<HTMLButtonElement>;
 }
 
-const Button: FC<Btn> = ({ label, handlerBtn }) => (
+const Button: FC<Btn> = ({ children, handlerBtn, className, ...allProp }) => (
   <button
-    className="border-solid border-2 border-sky-500 mb-2"
+    className={`border-solid border-2 border-sky-500 mb-2 px-2 ${className}`}
     type="button"
     onClick={handlerBtn}
+    {...allProp}
   >
-    {label}
+    {children}
   </button>
 );
 

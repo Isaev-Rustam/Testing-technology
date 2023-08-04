@@ -1,11 +1,11 @@
-export interface Todo {
+export interface ITodo {
   id: number;
   title: string;
   completed: boolean;
 }
 
 export interface Root {
-  todos: Todo[];
+  todos: ITodo[];
 }
 
 export const routes = {

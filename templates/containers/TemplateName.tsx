@@ -1,9 +1,7 @@
-import { FC, useEffect } from 'react';
+import { useEffect } from 'react';
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
-interface TemplateNameProps {}
-
-const TemplateName: FC<TemplateNameProps> = () => {
+const TemplateName = () => {
+  useEffect(() => {}, []);
   return (
     <div>
       <div data-testid="Templatename">TemplateName Component</div>

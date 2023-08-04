@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function Act() {
+const Act = () => {
   const [state, setState] = useState<boolean>(false);
 
   const handlerBtn = () => {
@@ -20,4 +20,5 @@ export default function Act() {
       </button>
     </div>
   );
-}
+};
+export default Act;

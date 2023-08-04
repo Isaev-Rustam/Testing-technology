@@ -12,6 +12,7 @@ const random = () =>
   new Array(10)
     .fill(null)
     .map((_, index) => ({ num: Math.random(), key: index }));
+
 const ListContainer = () => {
   const [num, setNum] = useState<INum[]>(() => random());
 
@@ -26,7 +27,7 @@ const ListContainer = () => {
 
   return (
     <>
-      <Button label="List App" handlerBtn={handlerBtn} />
+      <Button handlerBtn={handlerBtn}>btn</Button>
 
       {num.map((i) => (
         <List key={i.key} num={i.num} id={i.key} />

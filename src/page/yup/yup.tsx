@@ -40,5 +40,4 @@ const Yup = () => {
     </form>
   );
 };
-
 export default Yup;

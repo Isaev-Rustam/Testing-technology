@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { routes, Todo } from '../types/json-server';
+import { routes } from '../types/json-server';
 
 const axiosInstance = axios.create({
   baseURL: 'http://localhost:3604/',
@@ -24,15 +24,15 @@ axiosInstance.interceptors.response.use(
   (error) => Promise.reject(error)
 );
 
-const timeDelay = async (t = 1000): Promise<number> =>
+const timeDelay = async (t = 1000) =>
   new Promise((res) => {
     setTimeout(() => res(10), t);
   });
 
 export default class Api {
-  static getTodos = async () => {
+  public static getTodos = async <U>() => {
     await timeDelay(10);
-    const response = await axiosInstance.get<Todo>(routes.Todos);
+    const response = await axiosInstance.get<U>(routes.Todos);
 
     if (response.status !== 200) {
       throw new Error('Что-то пошло не так');
@@ -41,11 +41,11 @@ export default class Api {
     return response.data;
   };
 
-  static createTodo = async (data: Todo) =>
+  public static createTodo = async <T>(data: T) =>
     axiosInstance.post(`${routes.Todos}`, data);
 
-  static deleteTodo = async (id: number) =>
+  public static deleteTodo = async (id: number) =>
     axiosInstance.delete(`${routes.Todos}/${id}`);
 
-  static getMonth = async () => axiosInstance.get(`${routes.Month}`);
+  public static getMonth = async () => axiosInstance.get(`${routes.Month}`);
 }
